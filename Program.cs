@@ -64,7 +64,7 @@ namespace tmnffixer
                     {
                         pathaccepted = true;
                     }
-                    if (result == DialogResult.No)                    
+                    if (result == DialogResult.No)
                     {
                         TMNFPath = "";
                     }
@@ -97,6 +97,10 @@ namespace tmnffixer
                 string uniextractpath = uniextractfolder + @"\UniExtract";
                 string uniextractexe = uniextractpath + @"\UniExtract.exe";
                 wc.DownloadFile(" https://github.com/Bioruebe/UniExtract2/releases/download/v2.0.0-rc.3/UniExtractRC3.zip", uniexctractzip);
+                if(Directory.Exists(uniextractfolder))
+                {
+                    Directory.Delete(uniextractfolder, true);
+                }
                 Directory.CreateDirectory(uniextractfolder);
                 ZipFile.ExtractToDirectory(uniexctractzip, uniextractfolder);
 
@@ -136,7 +140,7 @@ namespace tmnffixer
                 File.WriteAllText(TMNFPath + @"\Nadeo.ini", nadeoini);
 
 
-                //delete stuff 
+                //delete stuff
                 Directory.Delete(extractfolder, true);
                 Directory.Delete(uniextractfolder, true);
                 File.Delete(uniexctractzip);
@@ -223,7 +227,7 @@ namespace tmnffixer
 
             }
 
-                    message = "der Lan2play TMNF Fix wurde erfolgreich durchgeführt, bitte PC neustarten, damit die Join links funktionieren!";
+                    message = "Der Lan2play TMNF Fix wurde erfolgreich durchgeführt!";
                     MessageBox.Show(message, MSGboxcaption, MessageBoxButtons.OK, MessageBoxIcon.Question);
 
 
