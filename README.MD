@@ -1,6 +1,6 @@
 # TMNFFixer
 
-This software updates the installed Trackmania Nations Forever installation (for a successful autodetection it has to be started one time before this fix) and adds the l2ptmnf url handler and the corresponding urllauncher.exe (https://bitbucket.org/lan2play/urllauncher)
+This software updates the installed Trackmania Nations Forever installation (for a successful autodetection it has to be started one time before this fix) and adds the l2ptmnf url handler and the corresponding urllauncher.exe (https://github.com/Lan2Play/URLLauncher)
 
 
 # Usage
